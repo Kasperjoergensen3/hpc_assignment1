@@ -42,6 +42,7 @@ int main(int argc, char *argv[])
 	// Perform matrix multiplication C = A * B using the library function
 	double **C_lib = copy_matrix(m, n, C);					// copy_matrix is a function defined in data.h
 	double time = timer(matmult_lib, m, n, k, A, B, C_lib); // timer is a function defined in perf.h and matmult_lib is a function defined in func.h
+	fprintf(file, ",%.8f", time);
 
 	// Perform matrix multiplication C = A * B using different loop orders
 	MatMultFunc matmult_funcs[] = {matmult_mnk, matmult_mkn, matmult_nmk, matmult_nkm, matmult_kmn, matmult_knm}; // Array of function pointers to different matrix multiplication implementations
