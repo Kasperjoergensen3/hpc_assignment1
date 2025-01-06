@@ -7,16 +7,16 @@ output_file="outputs/performance_results.csv"
 >"$output_file"
 
 # add a header to the output file
-echo "m,n,k,time_lib,time_mnk,time_mkn,time_nkm,time_nmk,time_kmn,time_knm" >"$output_file"
+echo "m,n,k,time_lib,time_mnk,time_mkn,time_nkm,time_nmk,time_kmn,time_knm\n" >"$output_file"
 
 make realclean
 make depend
 make
 
 # m, n, k value list
-m_values=(3 30 300 3000)
-n_values=(4 40 400 4000)
-k_values=(5 50 500 5000)
+m_values=(3 30 300)
+n_values=(4 40 400)
+k_values=(5 50 500)
 n_value_pairs=${#m_values[@]} # Number of m values
 
 for i in $(seq 0 $((n_value_pairs - 1))); do

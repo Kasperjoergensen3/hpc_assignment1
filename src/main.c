@@ -22,7 +22,7 @@ int main(int argc, char *argv[])
 		perror("Error opening file");
 		return 1;
 	}
-	fprintf(file, "\n%d,%d,%d", m, n, k);
+	fprintf(file, "%d,%d,%d", m, n, k);
 
 	// Generate random matrices A and B
 	double **A = random_matrix(m, k); // random_matrix is a function defined in data.h
@@ -50,6 +50,10 @@ int main(int argc, char *argv[])
 		}
 		fprintf(file, ",%.8f", time);
 	}
+	fprintf(file, "\n");
+
+	// Close the file
+	fclose(file);
 
 	// Free the memory allocated for the matrices
 	free_2d(A);		// free_2d is a function defined in data.h
