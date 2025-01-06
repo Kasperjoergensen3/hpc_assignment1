@@ -11,16 +11,16 @@ double timer(void (*func)(int, int, int, double **, double **, double **), int m
     double time = 0;
     double repeat_until = 5; // repeat the function until this time is reached
     int repetitions = 0;     // number of repetitions
-    while (time < repeat_until)
+    while (time / CLOCKS_PER_SEC < repeat_until)
     {
         printf("Repetition %d\n", repetitions);
         printf("Time: %lf\n", time);
-        repetitions++;                          // increment the repetitions counter
-        C = zero_matrix(m, n, C);               // zero_matrix is a function defined in data.h
-        clock_t start = clock();                // start the timer
-        func(m, n, k, A, B, C);                 // call the function to be timed. Result is stored in C
-        clock_t end = clock();                  // end the timer
-        time += (end - start) / CLOCKS_PER_SEC; // calculate the time taken
+        repetitions++;            // increment the repetitions counter
+        C = zero_matrix(m, n, C); // zero_matrix is a function defined in data.h
+        clock_t start = clock();  // start the timer
+        func(m, n, k, A, B, C);   // call the function to be timed. Result is stored in C
+        clock_t end = clock();    // end the timer
+        time += end - start;      // calculate the time taken (in clock ticks)
     }
-    return time / repetitions; // return the average time taken
+    return time / CLOCKS_PER_SEC / repetitions; // return the average time taken
 }
