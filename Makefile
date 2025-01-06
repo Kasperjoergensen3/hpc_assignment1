@@ -29,7 +29,7 @@ run_test :
 	sh jobs/job.sh
 
 run_program:
-	./$(TARGET)
+	./$(TARGET) 3 4 5 
 
 depend: 
 	$(CC) -MM $(SRCS) > Makefile.dep
