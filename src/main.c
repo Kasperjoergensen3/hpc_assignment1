@@ -1,32 +1,29 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
-#include "io.h"
-#include "data.h"
+#include "func.h" // Include the header file for the matrix multiplication functions
+#include "data.h" // Include the header file for the data functions
 
 int main(int argc, char *argv[])
 {
-	io();
-	data();
-	if (argc != 3)
-	{
-		printf("Usage: %s <num1> <num2>\n", argv[0]);
-		return 1; // Return an error code
-	}
+	// read n, m, k from command line arguments
+	int n = atoi(argv[1]); // atoi converts a string to an integer
+	int m = atoi(argv[2]);
+	int k = atoi(argv[3]);
 
-	// Convert arguments to integers
-	int num1 = atoi(argv[1]);
-	int num2 = atoi(argv[2]);
-	int sum = num1 + num2;
+	// Generate random matrices A and B
+	double **A = random_matrix(m, k); // random_matrix is a function defined in data.h
+	double **B = random_matrix(k, n); // fills the matrices with random values between 0 and 1
 
-	// Output the result of some operation (e.g., addition)
-	printf("The sum of %d and %d is %d\n", num1, num2, sum);
+	// Allocate memory for the result matrix C
+	double **C = dmalloc_2d(m, n); // dmalloc_2d is a function defined in data.h
+	C = zero_matrix(m, n, C);	   // zero_matrix is a function defined in data.h
 
-	// Write the data to a CSV file
-	const char *filename = "outputs/output.csv";
-	write_to_csv(filename, num1, num2, sum);
-	write_to_csv(filename, num1, num2, sum);
+	// Perform matrix multiplication C = A * B using the library function
+	double **C_lib_result = copy_matrix(m, n, C); // copy_matrix is a function defined in data.h
+	matmult_lib(m, n, k, A, B, C_lib_result);	  // matmult_lib is a function defined in func.h
+	printf("C_lib_result:\n");
+	print_matrix(m, n, C_lib_result); // print_matrix is a function defined in data.h
 
-	printf("Data written to %s\n", filename);
-	return (EXIT_SUCCESS);
+	// Perform matrix multiplication C = A * B using different loop orders
 }
