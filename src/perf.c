@@ -13,8 +13,6 @@ double timer(void (*func)(int, int, int, double **, double **, double **), int m
     int repetitions = 0;     // number of repetitions
     while (time / CLOCKS_PER_SEC < repeat_until)
     {
-        printf("Repetition %d\n", repetitions);
-        printf("Time: %lf\n", time / CLOCKS_PER_SEC);
         repetitions++;            // increment the repetitions counter
         C = zero_matrix(m, n, C); // zero_matrix is a function defined in data.h
         clock_t start = clock();  // start the timer
