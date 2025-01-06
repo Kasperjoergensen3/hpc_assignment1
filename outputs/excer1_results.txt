@@ -1,0 +1,726 @@
+Running ./excer1 with i=0 and j=0
+The sum of 0 and 0 is 0
+Starting my job...
+Doing I/O test2
+Working on data. test2
+
+Running ./excer1 with i=0 and j=1
+The sum of 0 and 1 is 1
+Starting my job...
+Doing I/O test2
+Working on data. test2
+
+Running ./excer1 with i=0 and j=2
+The sum of 0 and 2 is 2
+Starting my job...
+Doing I/O test2
+Working on data. test2
+
+Running ./excer1 with i=0 and j=3
+The sum of 0 and 3 is 3
+Starting my job...
+Doing I/O test2
+Working on data. test2
+
+Running ./excer1 with i=0 and j=4
+The sum of 0 and 4 is 4
+Starting my job...
+Doing I/O test2
+Working on data. test2
+
+Running ./excer1 with i=0 and j=5
+The sum of 0 and 5 is 5
+Starting my job...
+Doing I/O test2
+Working on data. test2
+
+Running ./excer1 with i=0 and j=6
+The sum of 0 and 6 is 6
+Starting my job...
+Doing I/O test2
+Working on data. test2
+
+Running ./excer1 with i=0 and j=7
+The sum of 0 and 7 is 7
+Starting my job...
+Doing I/O test2
+Working on data. test2
+
+Running ./excer1 with i=0 and j=8
+The sum of 0 and 8 is 8
+Starting my job...
+Doing I/O test2
+Working on data. test2
+
+Running ./excer1 with i=0 and j=9
+The sum of 0 and 9 is 9
+Starting my job...
+Doing I/O test2
+Working on data. test2
+
+Running ./excer1 with i=0 and j=10
+The sum of 0 and 10 is 10
+Starting my job...
+Doing I/O test2
+Working on data. test2
+
+Running ./excer1 with i=1 and j=0
+The sum of 1 and 0 is 1
+Starting my job...
+Doing I/O test2
+Working on data. test2
+
+Running ./excer1 with i=1 and j=1
+The sum of 1 and 1 is 2
+Starting my job...
+Doing I/O test2
+Working on data. test2
+
+Running ./excer1 with i=1 and j=2
+The sum of 1 and 2 is 3
+Starting my job...
+Doing I/O test2
+Working on data. test2
+
+Running ./excer1 with i=1 and j=3
+The sum of 1 and 3 is 4
+Starting my job...
+Doing I/O test2
+Working on data. test2
+
+Running ./excer1 with i=1 and j=4
+The sum of 1 and 4 is 5
+Starting my job...
+Doing I/O test2
+Working on data. test2
+
+Running ./excer1 with i=1 and j=5
+The sum of 1 and 5 is 6
+Starting my job...
+Doing I/O test2
+Working on data. test2
+
+Running ./excer1 with i=1 and j=6
+The sum of 1 and 6 is 7
+Starting my job...
+Doing I/O test2
+Working on data. test2
+
+Running ./excer1 with i=1 and j=7
+The sum of 1 and 7 is 8
+Starting my job...
+Doing I/O test2
+Working on data. test2
+
+Running ./excer1 with i=1 and j=8
+The sum of 1 and 8 is 9
+Starting my job...
+Doing I/O test2
+Working on data. test2
+
+Running ./excer1 with i=1 and j=9
+The sum of 1 and 9 is 10
+Starting my job...
+Doing I/O test2
+Working on data. test2
+
+Running ./excer1 with i=1 and j=10
+The sum of 1 and 10 is 11
+Starting my job...
+Doing I/O test2
+Working on data. test2
+
+Running ./excer1 with i=2 and j=0
+The sum of 2 and 0 is 2
+Starting my job...
+Doing I/O test2
+Working on data. test2
+
+Running ./excer1 with i=2 and j=1
+The sum of 2 and 1 is 3
+Starting my job...
+Doing I/O test2
+Working on data. test2
+
+Running ./excer1 with i=2 and j=2
+The sum of 2 and 2 is 4
+Starting my job...
+Doing I/O test2
+Working on data. test2
+
+Running ./excer1 with i=2 and j=3
+The sum of 2 and 3 is 5
+Starting my job...
+Doing I/O test2
+Working on data. test2
+
+Running ./excer1 with i=2 and j=4
+The sum of 2 and 4 is 6
+Starting my job...
+Doing I/O test2
+Working on data. test2
+
+Running ./excer1 with i=2 and j=5
+The sum of 2 and 5 is 7
+Starting my job...
+Doing I/O test2
+Working on data. test2
+
+Running ./excer1 with i=2 and j=6
+The sum of 2 and 6 is 8
+Starting my job...
+Doing I/O test2
+Working on data. test2
+
+Running ./excer1 with i=2 and j=7
+The sum of 2 and 7 is 9
+Starting my job...
+Doing I/O test2
+Working on data. test2
+
+Running ./excer1 with i=2 and j=8
+The sum of 2 and 8 is 10
+Starting my job...
+Doing I/O test2
+Working on data. test2
+
+Running ./excer1 with i=2 and j=9
+The sum of 2 and 9 is 11
+Starting my job...
+Doing I/O test2
+Working on data. test2
+
+Running ./excer1 with i=2 and j=10
+The sum of 2 and 10 is 12
+Starting my job...
+Doing I/O test2
+Working on data. test2
+
+Running ./excer1 with i=3 and j=0
+The sum of 3 and 0 is 3
+Starting my job...
+Doing I/O test2
+Working on data. test2
+
+Running ./excer1 with i=3 and j=1
+The sum of 3 and 1 is 4
+Starting my job...
+Doing I/O test2
+Working on data. test2
+
+Running ./excer1 with i=3 and j=2
+The sum of 3 and 2 is 5
+Starting my job...
+Doing I/O test2
+Working on data. test2
+
+Running ./excer1 with i=3 and j=3
+The sum of 3 and 3 is 6
+Starting my job...
+Doing I/O test2
+Working on data. test2
+
+Running ./excer1 with i=3 and j=4
+The sum of 3 and 4 is 7
+Starting my job...
+Doing I/O test2
+Working on data. test2
+
+Running ./excer1 with i=3 and j=5
+The sum of 3 and 5 is 8
+Starting my job...
+Doing I/O test2
+Working on data. test2
+
+Running ./excer1 with i=3 and j=6
+The sum of 3 and 6 is 9
+Starting my job...
+Doing I/O test2
+Working on data. test2
+
+Running ./excer1 with i=3 and j=7
+The sum of 3 and 7 is 10
+Starting my job...
+Doing I/O test2
+Working on data. test2
+
+Running ./excer1 with i=3 and j=8
+The sum of 3 and 8 is 11
+Starting my job...
+Doing I/O test2
+Working on data. test2
+
+Running ./excer1 with i=3 and j=9
+The sum of 3 and 9 is 12
+Starting my job...
+Doing I/O test2
+Working on data. test2
+
+Running ./excer1 with i=3 and j=10
+The sum of 3 and 10 is 13
+Starting my job...
+Doing I/O test2
+Working on data. test2
+
+Running ./excer1 with i=4 and j=0
+The sum of 4 and 0 is 4
+Starting my job...
+Doing I/O test2
+Working on data. test2
+
+Running ./excer1 with i=4 and j=1
+The sum of 4 and 1 is 5
+Starting my job...
+Doing I/O test2
+Working on data. test2
+
+Running ./excer1 with i=4 and j=2
+The sum of 4 and 2 is 6
+Starting my job...
+Doing I/O test2
+Working on data. test2
+
+Running ./excer1 with i=4 and j=3
+The sum of 4 and 3 is 7
+Starting my job...
+Doing I/O test2
+Working on data. test2
+
+Running ./excer1 with i=4 and j=4
+The sum of 4 and 4 is 8
+Starting my job...
+Doing I/O test2
+Working on data. test2
+
+Running ./excer1 with i=4 and j=5
+The sum of 4 and 5 is 9
+Starting my job...
+Doing I/O test2
+Working on data. test2
+
+Running ./excer1 with i=4 and j=6
+The sum of 4 and 6 is 10
+Starting my job...
+Doing I/O test2
+Working on data. test2
+
+Running ./excer1 with i=4 and j=7
+The sum of 4 and 7 is 11
+Starting my job...
+Doing I/O test2
+Working on data. test2
+
+Running ./excer1 with i=4 and j=8
+The sum of 4 and 8 is 12
+Starting my job...
+Doing I/O test2
+Working on data. test2
+
+Running ./excer1 with i=4 and j=9
+The sum of 4 and 9 is 13
+Starting my job...
+Doing I/O test2
+Working on data. test2
+
+Running ./excer1 with i=4 and j=10
+The sum of 4 and 10 is 14
+Starting my job...
+Doing I/O test2
+Working on data. test2
+
+Running ./excer1 with i=5 and j=0
+The sum of 5 and 0 is 5
+Starting my job...
+Doing I/O test2
+Working on data. test2
+
+Running ./excer1 with i=5 and j=1
+The sum of 5 and 1 is 6
+Starting my job...
+Doing I/O test2
+Working on data. test2
+
+Running ./excer1 with i=5 and j=2
+The sum of 5 and 2 is 7
+Starting my job...
+Doing I/O test2
+Working on data. test2
+
+Running ./excer1 with i=5 and j=3
+The sum of 5 and 3 is 8
+Starting my job...
+Doing I/O test2
+Working on data. test2
+
+Running ./excer1 with i=5 and j=4
+The sum of 5 and 4 is 9
+Starting my job...
+Doing I/O test2
+Working on data. test2
+
+Running ./excer1 with i=5 and j=5
+The sum of 5 and 5 is 10
+Starting my job...
+Doing I/O test2
+Working on data. test2
+
+Running ./excer1 with i=5 and j=6
+The sum of 5 and 6 is 11
+Starting my job...
+Doing I/O test2
+Working on data. test2
+
+Running ./excer1 with i=5 and j=7
+The sum of 5 and 7 is 12
+Starting my job...
+Doing I/O test2
+Working on data. test2
+
+Running ./excer1 with i=5 and j=8
+The sum of 5 and 8 is 13
+Starting my job...
+Doing I/O test2
+Working on data. test2
+
+Running ./excer1 with i=5 and j=9
+The sum of 5 and 9 is 14
+Starting my job...
+Doing I/O test2
+Working on data. test2
+
+Running ./excer1 with i=5 and j=10
+The sum of 5 and 10 is 15
+Starting my job...
+Doing I/O test2
+Working on data. test2
+
+Running ./excer1 with i=6 and j=0
+The sum of 6 and 0 is 6
+Starting my job...
+Doing I/O test2
+Working on data. test2
+
+Running ./excer1 with i=6 and j=1
+The sum of 6 and 1 is 7
+Starting my job...
+Doing I/O test2
+Working on data. test2
+
+Running ./excer1 with i=6 and j=2
+The sum of 6 and 2 is 8
+Starting my job...
+Doing I/O test2
+Working on data. test2
+
+Running ./excer1 with i=6 and j=3
+The sum of 6 and 3 is 9
+Starting my job...
+Doing I/O test2
+Working on data. test2
+
+Running ./excer1 with i=6 and j=4
+The sum of 6 and 4 is 10
+Starting my job...
+Doing I/O test2
+Working on data. test2
+
+Running ./excer1 with i=6 and j=5
+The sum of 6 and 5 is 11
+Starting my job...
+Doing I/O test2
+Working on data. test2
+
+Running ./excer1 with i=6 and j=6
+The sum of 6 and 6 is 12
+Starting my job...
+Doing I/O test2
+Working on data. test2
+
+Running ./excer1 with i=6 and j=7
+The sum of 6 and 7 is 13
+Starting my job...
+Doing I/O test2
+Working on data. test2
+
+Running ./excer1 with i=6 and j=8
+The sum of 6 and 8 is 14
+Starting my job...
+Doing I/O test2
+Working on data. test2
+
+Running ./excer1 with i=6 and j=9
+The sum of 6 and 9 is 15
+Starting my job...
+Doing I/O test2
+Working on data. test2
+
+Running ./excer1 with i=6 and j=10
+The sum of 6 and 10 is 16
+Starting my job...
+Doing I/O test2
+Working on data. test2
+
+Running ./excer1 with i=7 and j=0
+The sum of 7 and 0 is 7
+Starting my job...
+Doing I/O test2
+Working on data. test2
+
+Running ./excer1 with i=7 and j=1
+The sum of 7 and 1 is 8
+Starting my job...
+Doing I/O test2
+Working on data. test2
+
+Running ./excer1 with i=7 and j=2
+The sum of 7 and 2 is 9
+Starting my job...
+Doing I/O test2
+Working on data. test2
+
+Running ./excer1 with i=7 and j=3
+The sum of 7 and 3 is 10
+Starting my job...
+Doing I/O test2
+Working on data. test2
+
+Running ./excer1 with i=7 and j=4
+The sum of 7 and 4 is 11
+Starting my job...
+Doing I/O test2
+Working on data. test2
+
+Running ./excer1 with i=7 and j=5
+The sum of 7 and 5 is 12
+Starting my job...
+Doing I/O test2
+Working on data. test2
+
+Running ./excer1 with i=7 and j=6
+The sum of 7 and 6 is 13
+Starting my job...
+Doing I/O test2
+Working on data. test2
+
+Running ./excer1 with i=7 and j=7
+The sum of 7 and 7 is 14
+Starting my job...
+Doing I/O test2
+Working on data. test2
+
+Running ./excer1 with i=7 and j=8
+The sum of 7 and 8 is 15
+Starting my job...
+Doing I/O test2
+Working on data. test2
+
+Running ./excer1 with i=7 and j=9
+The sum of 7 and 9 is 16
+Starting my job...
+Doing I/O test2
+Working on data. test2
+
+Running ./excer1 with i=7 and j=10
+The sum of 7 and 10 is 17
+Starting my job...
+Doing I/O test2
+Working on data. test2
+
+Running ./excer1 with i=8 and j=0
+The sum of 8 and 0 is 8
+Starting my job...
+Doing I/O test2
+Working on data. test2
+
+Running ./excer1 with i=8 and j=1
+The sum of 8 and 1 is 9
+Starting my job...
+Doing I/O test2
+Working on data. test2
+
+Running ./excer1 with i=8 and j=2
+The sum of 8 and 2 is 10
+Starting my job...
+Doing I/O test2
+Working on data. test2
+
+Running ./excer1 with i=8 and j=3
+The sum of 8 and 3 is 11
+Starting my job...
+Doing I/O test2
+Working on data. test2
+
+Running ./excer1 with i=8 and j=4
+The sum of 8 and 4 is 12
+Starting my job...
+Doing I/O test2
+Working on data. test2
+
+Running ./excer1 with i=8 and j=5
+The sum of 8 and 5 is 13
+Starting my job...
+Doing I/O test2
+Working on data. test2
+
+Running ./excer1 with i=8 and j=6
+The sum of 8 and 6 is 14
+Starting my job...
+Doing I/O test2
+Working on data. test2
+
+Running ./excer1 with i=8 and j=7
+The sum of 8 and 7 is 15
+Starting my job...
+Doing I/O test2
+Working on data. test2
+
+Running ./excer1 with i=8 and j=8
+The sum of 8 and 8 is 16
+Starting my job...
+Doing I/O test2
+Working on data. test2
+
+Running ./excer1 with i=8 and j=9
+The sum of 8 and 9 is 17
+Starting my job...
+Doing I/O test2
+Working on data. test2
+
+Running ./excer1 with i=8 and j=10
+The sum of 8 and 10 is 18
+Starting my job...
+Doing I/O test2
+Working on data. test2
+
+Running ./excer1 with i=9 and j=0
+The sum of 9 and 0 is 9
+Starting my job...
+Doing I/O test2
+Working on data. test2
+
+Running ./excer1 with i=9 and j=1
+The sum of 9 and 1 is 10
+Starting my job...
+Doing I/O test2
+Working on data. test2
+
+Running ./excer1 with i=9 and j=2
+The sum of 9 and 2 is 11
+Starting my job...
+Doing I/O test2
+Working on data. test2
+
+Running ./excer1 with i=9 and j=3
+The sum of 9 and 3 is 12
+Starting my job...
+Doing I/O test2
+Working on data. test2
+
+Running ./excer1 with i=9 and j=4
+The sum of 9 and 4 is 13
+Starting my job...
+Doing I/O test2
+Working on data. test2
+
+Running ./excer1 with i=9 and j=5
+The sum of 9 and 5 is 14
+Starting my job...
+Doing I/O test2
+Working on data. test2
+
+Running ./excer1 with i=9 and j=6
+The sum of 9 and 6 is 15
+Starting my job...
+Doing I/O test2
+Working on data. test2
+
+Running ./excer1 with i=9 and j=7
+The sum of 9 and 7 is 16
+Starting my job...
+Doing I/O test2
+Working on data. test2
+
+Running ./excer1 with i=9 and j=8
+The sum of 9 and 8 is 17
+Starting my job...
+Doing I/O test2
+Working on data. test2
+
+Running ./excer1 with i=9 and j=9
+The sum of 9 and 9 is 18
+Starting my job...
+Doing I/O test2
+Working on data. test2
+
+Running ./excer1 with i=9 and j=10
+The sum of 9 and 10 is 19
+Starting my job...
+Doing I/O test2
+Working on data. test2
+
+Running ./excer1 with i=10 and j=0
+The sum of 10 and 0 is 10
+Starting my job...
+Doing I/O test2
+Working on data. test2
+
+Running ./excer1 with i=10 and j=1
+The sum of 10 and 1 is 11
+Starting my job...
+Doing I/O test2
+Working on data. test2
+
+Running ./excer1 with i=10 and j=2
+The sum of 10 and 2 is 12
+Starting my job...
+Doing I/O test2
+Working on data. test2
+
+Running ./excer1 with i=10 and j=3
+The sum of 10 and 3 is 13
+Starting my job...
+Doing I/O test2
+Working on data. test2
+
+Running ./excer1 with i=10 and j=4
+The sum of 10 and 4 is 14
+Starting my job...
+Doing I/O test2
+Working on data. test2
+
+Running ./excer1 with i=10 and j=5
+The sum of 10 and 5 is 15
+Starting my job...
+Doing I/O test2
+Working on data. test2
+
+Running ./excer1 with i=10 and j=6
+The sum of 10 and 6 is 16
+Starting my job...
+Doing I/O test2
+Working on data. test2
+
+Running ./excer1 with i=10 and j=7
+The sum of 10 and 7 is 17
+Starting my job...
+Doing I/O test2
+Working on data. test2
+
+Running ./excer1 with i=10 and j=8
+The sum of 10 and 8 is 18
+Starting my job...
+Doing I/O test2
+Working on data. test2
+
+Running ./excer1 with i=10 and j=9
+The sum of 10 and 9 is 19
+Starting my job...
+Doing I/O test2
+Working on data. test2
+
+Running ./excer1 with i=10 and j=10
+The sum of 10 and 10 is 20
+Starting my job...
+Doing I/O test2
+Working on data. test2
+

@@ -1,0 +1,3 @@
+data.o: src/data.c src/data.h
+io.o: src/io.c src/io.h
+main.o: src/main.c src/io.h src/data.h
