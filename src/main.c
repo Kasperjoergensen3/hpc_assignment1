@@ -22,6 +22,13 @@ int main(int argc, char *argv[])
 		perror("Error opening file");
 		return 1;
 	}
+	// Check if file is empty (i.e., just created or truncated)
+	fseek(file, 0, SEEK_END);
+	if (ftell(file) == 0)
+	{ // If the file is empty, write the header
+		fprintf(file, "m,n,k,time_lib,time_mnk,time_mkn,time_nkm,time_nmk,time_kmn,time_knm\n");
+	}
+	rewind(file); // Reset file position
 	fprintf(file, "%d,%d,%d", m, n, k);
 
 	// Generate random matrices A and B

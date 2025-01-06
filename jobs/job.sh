@@ -6,11 +6,6 @@ output_file="outputs/performance_results.csv"
 # Clear the output file if it exists
 >"$output_file"
 
-# Add a header only if the file is empty
-if [ ! -s "$output_file" ]; then
-    echo "m,n,k,time_lib,time_mnk,time_mkn,time_nkm,time_nmk,time_kmn,time_knm\n" >>"$output_file"
-fi
-
 # Compile the project
 make realclean
 make depend
