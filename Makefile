@@ -31,6 +31,11 @@ run_test :
 run_program:
 	./$(TARGET) 3 4 5 
 
+git:
+	git add .
+	git commit -m "commit"
+	git push
+
 depend: 
 	$(CC) -MM $(SRCS) > Makefile.dep
 #$(CC) -MM data.c main.c io.c > Makefile.dep
