@@ -1,7 +1,7 @@
 # makefile for the hpc course
 CC      = gcc
 OPT     = -g -O3
-XLIBS	= -L/usr/lib64/atlas -lsatlas
+XLIBS	= -L/usr/lib64/atlas -lsatlas -lm
 WARN    = -Wall
 CFLAGS  = $(OPT) $(WARN) # the compiler flags
 

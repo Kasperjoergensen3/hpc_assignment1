@@ -1,4 +1,3 @@
-
 #include <math.h>
 #if defined(__MACH__) && defined(__APPLE__)
 #include <Accelerate/Accelerate.h>
