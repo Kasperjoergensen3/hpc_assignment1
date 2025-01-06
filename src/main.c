@@ -15,7 +15,7 @@ int main(int argc, char *argv[])
 	int k = atoi(argv[3]);
 	char *output_file = argv[4];
 
-	// Open file in write mode
+	// Open file in append mode
 	FILE *file = fopen(output_file, "a");
 	if (file == NULL)
 	{

@@ -24,7 +24,7 @@ for i in $(seq 0 $((n_value_pairs - 1))); do
     n=${n_values[$i]}
     k=${k_values[$i]}
     echo "Running ./project1 with m=$m, n=$n, k=$k"
-    ./project1 "$m" "$n" "$k" $output_file
+    ./project1 "$m" "$n" "$k" "$output_file"
 done
 
 echo "Results saved to $output_file"
