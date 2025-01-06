@@ -1,3 +1,4 @@
 data.o: src/data.c
 func.o: src/func.c src/data.h src/func.h
-main.o: src/main.c src/func.h src/data.h
+main.o: src/main.c src/func.h src/data.h src/perf.h
+perf.o: src/perf.c src/data.h src/perf.h
