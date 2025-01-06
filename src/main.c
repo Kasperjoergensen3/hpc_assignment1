@@ -21,11 +21,11 @@ int main(int argc, char *argv[])
 	C = zero_matrix(m, n, C);	   // zero_matrix is a function defined in data.h
 
 	// Perform matrix multiplication C = A * B using the library function
-	double **C_lib_result = copy_matrix(m, n, C);					// copy_matrix is a function defined in data.h
-	int time_lib = timer(matmult_lib, m, n, k, A, B, C_lib_result); // timer is a function defined in perf.h and matmult_lib is a function defined in func.h					// matmult_lib is a function defined in func.h
+	double **C_lib_result = copy_matrix(m, n, C);					   // copy_matrix is a function defined in data.h
+	double time_lib = timer(matmult_lib, m, n, k, A, B, C_lib_result); // timer is a function defined in perf.h and matmult_lib is a function defined in func.h					// matmult_lib is a function defined in func.h
 	printf("C_lib_result:\n");
-	print_matrix(m, n, C_lib_result); // print_matrix is a function defined in data.h
-	printf("Time taken by matmult_lib: %d\n", time_lib);
+	// print_matrix(m, n, C_lib_result); // print_matrix is a function defined in data.h
+	printf("Time taken by matmult_lib: %.8f seconds\n", time_lib);
 
 	// Perform matrix multiplication C = A * B using different loop orders
 }
