@@ -22,3 +22,19 @@ double timer(void (*func)(int, int, int, double **, double **, double **), int m
     }
     return time / CLOCKS_PER_SEC / repetitions; // return the average time taken
 }
+
+// check if two matrices are equal
+int check_matrix(int m, int n, double **A, double **B)
+{
+    for (int i = 0; i < m; i++)
+    {
+        for (int j = 0; j < n; j++)
+        {
+            if (fabs(A[i][j] - B[i][j]) > 1e-6)
+            {
+                return 0;
+            }
+        }
+    }
+    return 1;
+}
