@@ -67,9 +67,11 @@ run_program: $(TARGET)
 	$(Q)./$(TARGET)
 
 # Run driver with example input
+DIMS = 1000 2000 400
+ORDER = nat
 run_driver:
 	@echo "Running driver..."
-	$(Q)LD_LIBRARY_PATH=./$(LIBDIR) LD_PRELOAD=./$(TARGET) ./$(DRIVER) knm 1000 2000 400
+	$(Q)LD_LIBRARY_PATH=./$(LIBDIR) LD_PRELOAD=./$(TARGET) ./$(DRIVER) $(ORDER) $(KNM)
 
 git:
 	git add .

@@ -1,0 +1,14 @@
+dwarfdump of executables
+=========================
+
+libmatmult_default.so
+              DW_AT_producer	("GNU C17 11.5.0 20240719 (Red Hat 11.5.0-2) -mtune=generic -march=x86-64-v2 -g -fPIC")
+libmatmult_O.so
+              DW_AT_producer	("GNU C17 11.5.0 20240719 (Red Hat 11.5.0-2) -mtune=generic -march=x86-64-v2 -g -O -fPIC")
+libmatmult_O2.so
+              DW_AT_producer	("GNU C17 11.5.0 20240719 (Red Hat 11.5.0-2) -mtune=generic -march=x86-64-v2 -g -O2 -fPIC")
+libmatmult_O3.so
+              DW_AT_producer	("GNU C17 11.5.0 20240719 (Red Hat 11.5.0-2) -mtune=generic -march=x86-64-v2 -g -O3 -fPIC")
+libmatmult_Ofast.so
+              DW_AT_producer	("GNU C17 11.5.0 20240719 (Red Hat 11.5.0-2) -mtune=generic -march=x86-64-v2 -g -Ofast -fPIC")
+              DW_AT_producer	("GNU C17 11.5.0 20240719 (Red Hat 11.5.0-2) -march=x86-64-v2 -mtune=generic -mlong-double-80 -mshstk -g -g -g -O2 -O2 -O2 -fstack-protector-strong -fcf-protection=full -fexceptions -fstack-protector-strong -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection=full -fcf-protection=full -fbuilding-libgcc -fno-stack-protector -fpic -fcf-protection=full")

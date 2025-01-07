@@ -1,3 +1,4 @@
+#!/bin/sh
 #remove all the executables and results
 make realclean
 
