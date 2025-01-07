@@ -2,11 +2,13 @@ TARGET	= libmatmult.so
 LIBSRCS	= $(wildcard src/*.c)
 LIBOBJS	= $(LIBSRCS:.c=.o)
 
+INCLUDEPATH = -I../include
+
 OPT     = -g
 PIC	= -fPIC
 
 CC      = gcc
-CFLAGS  = $(OPT) $(PIC) $(XOPTS)
+CFLAGS  = $(OPT) $(PIC) $(XOPTS) $(INCLUDEPATH)
 
 SOFLAGS = -shared 
 XLIBS	= -L/usr/lib64/atlas -lsatlas
