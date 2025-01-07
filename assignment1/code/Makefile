@@ -1,9 +1,10 @@
+# name tag
+TAG =
 # Directories
 SRCDIR  = src
 OBJDIR  = build
-DRIVERDIR = drivers
-BINDIR  = bin
-INCLUDEDIR = include
+LIBDIR  = lib
+DRIVER = drivers/matmult_c.gcc
 
 # Compiler settings
 CC      = gcc
@@ -11,33 +12,28 @@ OPT     = -g
 XOPTS   = 
 PIC     = -fPIC
 WARN    = -Wall
-CFLAGS  = $(OPT) $(PIC) $(XOPTS) -I$(INCLUDEDIR) $(WARN)
+CFLAGS  = $(OPT) $(PIC) $(XOPTS) $(WARN)
 
 # Source and object files
 LIBSRCS = $(wildcard $(SRCDIR)/*.c)
 LIBOBJS = $(patsubst $(SRCDIR)/%.c, $(OBJDIR)/%.o, $(LIBSRCS))
 
 # Output shared library
-TARGET  = $(BINDIR)/libmatmult.so
+TARGET  = $(LIBDIR)/libmatmult$(TAG).so
 
 # Shared library flags
 SOFLAGS = -shared 
-XLIBS   =  #-L/usr/lib64/atlas -lsatlas
-
-# Additional driver sources
-DRIVERSRC = $(DRIVERDIR)/matmult_c.gcc
-DRIVEROBJ = $(OBJDIR)/matmult_c.o
-DRIVERBIN = $(BINDIR)/matmult_c
+XLIBS   =  -L/usr/lib64/atlas -lsatlas
 
 # Verbosity control
 V ?= 1
 Q = $(if $(filter 1,$V),,@)
 
 # Ensure output directories exist
-$(shell mkdir -p $(OBJDIR) $(BINDIR))
+$(shell mkdir -p $(OBJDIR) $(LIBDIR) outputs figures data)
 
 # Build the shared library
-$(TARGET): $(LIBOBJS)
+$(TARGET): depend $(LIBOBJS)
 	@echo "Linking $@..."
 	$(Q)$(CC) -o $@ $(SOFLAGS) $(LIBOBJS) $(XLIBS)
 
@@ -46,16 +42,6 @@ $(OBJDIR)/%.o: $(SRCDIR)/%.c
 	@echo "Compiling $<..."
 	$(Q)$(CC) $(CFLAGS) -c $< -o $@
 
-# Compile the driver
-$(DRIVEROBJ): $(DRIVERSRC)
-	@echo "Compiling driver $<..."
-	$(Q)$(CC) $(CFLAGS) -c $< -o $@
-
-# Link the driver with the shared library
-$(DRIVERBIN): $(DRIVEROBJ) $(TARGET)
-	@echo "Linking driver..."
-	$(Q)$(CC) -o $@ $(DRIVEROBJ) -L$(BINDIR) -lmatmult $(XLIBS)
-
 # Clean build artifacts
 clean:
 	@echo "Cleaning object files..."
@@ -63,7 +49,7 @@ clean:
 
 realclean: clean
 	@echo "Removing binary and dependency files..."
-	$(Q)rm -rf $(BINDIR) $(OBJDIR) Makefile.dep outputs/*
+	$(Q)rm -rf $(LIBDIR) $(OBJDIR) Makefile.dep outputs figures data
 
 # Run test script
 run_test:
@@ -79,6 +65,11 @@ depend:
 run_program: $(TARGET)
 	@echo "Executing binary..."
 	$(Q)./$(TARGET)
+
+# Run driver with example input
+run_driver:
+	@echo "Running driver..."
+	$(Q)LD_LIBRARY_PATH=./$(LIBDIR) LD_PRELOAD=./$(TARGET) ./$(DRIVER) knm 1000 2000 400
 
 # Include dependency file if it exists
 -include Makefile.dep
