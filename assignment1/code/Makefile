@@ -1,14 +1,24 @@
-TARGET	= libmatmult.so
-LIBSRCS	= $(wildcard src/*.c)
-LIBOBJS	= $(LIBSRCS:.c=.o)
-
-INCLUDEPATH = -I../include
-
-OPT     = -g
-PIC	= -fPIC
-
+# Compiler settings
 CC      = gcc
-CFLAGS  = $(OPT) $(PIC) $(XOPTS) $(INCLUDEPATH)
+OPT     = -g
+XOPTS = ""
+PIC	= -fPIC
+INCLUDEDIR= -Iinclude
+CFLAGS  = $(OPT) $(PIC) $(XOPTS) $(INCLUDEDIR)
+
+SRCDIR = src
+OBJDIR = build
+BINDIR = bin
+LIBSRCS	= $(wildcard src/*.c)
+LIBOBJS	= $(patsubst src/%.c, $(OBJDIR)/%.o, $(LIBSRCS))
+
+
+
+TARGET	= $(BINDIR)/libmatmult.so
+
+
+
+
 
 SOFLAGS = -shared 
 XLIBS	= -L/usr/lib64/atlas -lsatlas
@@ -26,7 +36,7 @@ run_test :
 	sh jobs/job.sh
 
 depend: 
-	$(CC) -MM $(LIBSRCS) > Makefile.dep
+	$(CC) -MM $(INCLUDEDIR) $(LIBSRCS) > Makefile.dep 
 #$(CC) -MM data.c main.c io.c > Makefile.dep
 run_program:
 	./$(TARGET)
