@@ -1,0 +1,6 @@
+              DW_AT_producer	("GNU C17 11.5.0 20240719 (Red Hat 11.5.0-2) -mtune=generic -march=x86-64-v2 -g -fPIC")
+              DW_AT_producer	("GNU C17 11.5.0 20240719 (Red Hat 11.5.0-2) -mtune=generic -march=x86-64-v2 -g -O1 -fPIC")
+              DW_AT_producer	("GNU C17 11.5.0 20240719 (Red Hat 11.5.0-2) -mtune=generic -march=x86-64-v2 -g -O2 -fPIC")
+              DW_AT_producer	("GNU C17 11.5.0 20240719 (Red Hat 11.5.0-2) -mtune=generic -march=x86-64-v2 -g -O3 -fPIC")
+              DW_AT_producer	("GNU C17 11.5.0 20240719 (Red Hat 11.5.0-2) -mtune=generic -march=x86-64-v2 -g -Ofast -fPIC")
+              DW_AT_producer	("GNU C17 11.5.0 20240719 (Red Hat 11.5.0-2) -march=x86-64-v2 -mtune=generic -mlong-double-80 -mshstk -g -g -g -O2 -O2 -O2 -fstack-protector-strong -fcf-protection=full -fexceptions -fstack-protector-strong -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection=full -fcf-protection=full -fbuilding-libgcc -fno-stack-protector -fpic -fcf-protection=full")
