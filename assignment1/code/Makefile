@@ -24,9 +24,9 @@ run_test :
 	sh jobs/job.sh
 
 depend: 
-	$(CC) -MM $(SRCS) > Makefile.dep
+	$(CC) -MM $(LIBSRCS) > Makefile.dep
 #$(CC) -MM data.c main.c io.c > Makefile.dep
 run_program:
 	./$(TARGET)
-	
+
 -include Makefile.dep
