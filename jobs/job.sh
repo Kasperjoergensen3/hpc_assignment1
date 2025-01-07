@@ -13,9 +13,9 @@ make
 
 # Run the project with different m, n, k values
 # m, n, k value list
-m_values=(3 30 300)
-n_values=(4 40 400)
-k_values=(5 50 500)
+m_values=(1000 50 500 100 2000 30 256)
+n_values=(800 40 500 2000 50 40 256)
+k_values=(50 2000 500 100 50 5000 256)
 n_value_pairs=${#m_values[@]} # Number of m values
 
 for i in $(seq 0 $((n_value_pairs - 1))); do

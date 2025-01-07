@@ -57,7 +57,6 @@ int main(int argc, char *argv[])
 			return 1;
 		}
 		fprintf(file, ",%.8f", time);
-		printf("Time taken for %d: %.8f\n", i, time);
 	}
 	fprintf(file, "\n");
 
