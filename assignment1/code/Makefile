@@ -35,7 +35,7 @@ $(shell mkdir -p $(OBJDIR) $(LIBDIR) outputs figures data)
 # Build the shared library
 $(TARGET): depend $(LIBOBJS)
 	@echo "Linking $@..."
-	$(Q)$(CC) -o $@ $(SOFLAGS) $(LIBOBJS) $(XLIBS)
+	$(Q)$(CC) $(CFLAGS) -o $@ $(SOFLAGS) $(LIBOBJS) $(XLIBS)
 
 # Compile object files
 $(OBJDIR)/%.o: $(SRCDIR)/%.c
