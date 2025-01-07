@@ -16,3 +16,17 @@ $(TARGET): $(LIBOBJS)
 
 clean:
 	@/bin/rm -f core core.* $(LIBOBJS) 
+
+realclean : clean
+	@rm -f $(TARGET) Makefile.dep outputs/*
+
+run_test : 
+	sh jobs/job.sh
+
+depend: 
+	$(CC) -MM $(SRCS) > Makefile.dep
+#$(CC) -MM data.c main.c io.c > Makefile.dep
+run_program:
+	./$(TARGET)
+	
+-include Makefile.dep
