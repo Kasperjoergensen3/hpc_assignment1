@@ -1,2 +1,0 @@
-rm: cannot remove 'outputs': Directory not empty
-make: *** [Makefile:48: realclean] Error 1

@@ -46,3 +46,4 @@
  24576.000    134.833 0 # matmult_nkm
  24576.000    589.942 0 # matmult_nmk
  24576.000   3635.367 0 # matmult_kmn
+ 24576.000    134.584 0 # matmult_knm
