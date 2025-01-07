@@ -1,8 +1,7 @@
 #include <cblas.h>
 #include <math.h>	// For fmin
 #include <stdlib.h> // For malloc/free
-#include "data.h"
-#include "func.h"
+#include "matmult.h"
 
 /**
  * @brief Performs matrix multiplication using an optimized BLAS library (cblas_dgemm).
