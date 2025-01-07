@@ -33,7 +33,7 @@ Q = $(if $(filter 1,$V),,@)
 $(shell mkdir -p $(OBJDIR) $(LIBDIR) outputs figures data)
 
 # Build the shared library
-$(TARGET): depend $(LIBOBJS)
+$(TARGET): clean depend $(LIBOBJS)
 	@echo "Linking $@..."
 	$(Q)$(CC) $(CFLAGS) -o $@ $(SOFLAGS) $(LIBOBJS) $(XLIBS)
 

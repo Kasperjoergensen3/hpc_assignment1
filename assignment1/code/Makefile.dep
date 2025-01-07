@@ -1,1 +1,0 @@
-matmult.o: src/matmult.c src/matmult.h
