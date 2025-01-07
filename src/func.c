@@ -40,7 +40,7 @@ void matmult(int M, int N, int K, double **A, double **B, double **C, Order orde
 	// Loop orders
 	switch (order)
 	{
-	case MNK: // natural ordering
+	case MNK:
 		for (int m = 0; m < M; m++)
 			for (int n = 0; n < N; n++)
 				for (int k = 0; k < K; k++)

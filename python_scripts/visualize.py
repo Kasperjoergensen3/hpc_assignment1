@@ -16,16 +16,22 @@ def main(args):
     print(data.head())
 
     x = data.values[:, 0]
-    y = data.values[:, 3:]
+    time = data.values[:, 3:]
+    perf = (np.prod(data.values[:, :3].astype(float), axis=1) / time) * 2.0e-6
     colnames = data.columns[3:]
     colnames = [name.split("_")[-1] for name in colnames]
 
-    plt.figure()
-    for i in range(y.shape[1]):
-        plt.plot(x, y[:, i], label=colnames[i])
-    plt.xlabel("x")
-    plt.ylabel("runtime (s)")
-    plt.legend()
+    fig, ax = plt.subplots(2, 1)
+    for i in range(time.shape[1]):
+        ax[0].plot(range(time.shape[0]), time[:, i], label=colnames[i])
+    ax[0].set_xlabel("x")
+    ax[0].set_ylabel("time (s)")
+    ax[0].legend()
+    for i in range(perf.shape[1]):
+        ax[1].plot(range(time.shape[0]), perf[:, i], label=colnames[i])
+    ax[1].set_xlabel("x")
+    ax[1].set_ylabel("performance (GFLOPS)")
+    ax[1].legend()
     plt.savefig(root.joinpath("figures/performance.png"))
 
 

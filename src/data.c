@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include "data.h"
 
 // allocate a double-prec m x n matri
 double **dmalloc_2d(int m, int n)
