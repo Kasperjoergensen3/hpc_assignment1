@@ -34,44 +34,38 @@ $(shell mkdir -p $(OBJDIR) $(LIBDIR) outputs figures data)
 
 # Build the shared library
 $(TARGET): clean depend $(LIBOBJS)
-	@echo "Linking $@..."
 	$(Q)$(CC) $(CFLAGS) -o $@ $(SOFLAGS) $(LIBOBJS) $(XLIBS)
 
 # Compile object files
 $(OBJDIR)/%.o: $(SRCDIR)/%.c
-	@echo "Compiling $<..."
 	$(Q)$(CC) $(CFLAGS) -c $< -o $@
 
 # Clean build artifacts
 clean:
-	@echo "Cleaning object files..."
 	$(Q)rm -f $(LIBOBJS)
 
 realclean: clean
-	@echo "Removing binary and dependency files..."
 	$(Q)rm -rf $(LIBDIR) $(OBJDIR) Makefile.dep outputs figures data
 
 # Run test script
 run_test:
-	@echo "Running test script..."
 	$(Q)sh jobs/job.sh
 
 # Generate dependencies
 depend:
-	@echo "Generating dependencies..."
 	$(Q)$(CC) -MM $(CFLAGS) $(LIBSRCS) > Makefile.dep
 
 # Run program (assumes an executable, not shared library)
 run_program: $(TARGET)
-	@echo "Executing binary..."
 	$(Q)./$(TARGET)
 
 # Run driver with example input
 DIMS = 1000 2000 400
 ORDER = nat
 run_driver:
-	@echo "Running driver..."
-	$(Q)LD_LIBRARY_PATH=./$(LIBDIR) LD_PRELOAD=./$(TARGET) ./$(DRIVER) $(ORDER) $(KNM)
+	$(Q)cp ./$(TARGET) ./lib/libmatmult.so
+	$(Q)LD_LIBRARY_PATH=./$(LIBDIR) ./$(DRIVER) $(ORDER) $(DIMS)
+	$(Q)rm ./lib/libmatmult.so
 
 git:
 	git add .

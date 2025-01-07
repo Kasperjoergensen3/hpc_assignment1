@@ -30,14 +30,20 @@ void matmult_lib(int m, int n, int k, double **A, double **B, double **C);
 void matmult_nat(int m, int n, int k, double **A, double **B, double **C);
 
 /**
+ * @brief Set matrix elements to zero
+ */
+void set_to_zero(int M, int N, double **C);
+
+/**
  * @brief Matrix multiplication with different loop orderings.
  */
 void matmult_mnk(int m, int n, int k, double **A, double **B, double **C);
 void matmult_mkn(int m, int n, int k, double **A, double **B, double **C);
 void matmult_nkm(int m, int n, int k, double **A, double **B, double **C);
+void matmult_nmk(int m, int n, int k, double **A, double **B, double **C);
 void matmult_kmn(int m, int n, int k, double **A, double **B, double **C);
 void matmult_knm(int m, int n, int k, double **A, double **B, double **C);
-void matmult_nmk(int m, int n, int k, double **A, double **B, double **C);
+
 
 /**
  * @brief Blocked matrix multiplication for cache efficiency.

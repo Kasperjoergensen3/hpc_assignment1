@@ -26,10 +26,21 @@ void matmult_nat(int M, int N, int K, double **A, double **B, double **C)
 }
 
 /**
+ * @brief Set matrix elements to zero
+ */
+void set_to_zero(int M, int N, double **C)
+{
+	for (int m = 0; m < M; m++)
+		for (int n = 0; n < N; n++)
+			C[m][n] = 0;
+}
+
+/**
  * @brief Matrix multiplication with m-n-k loop ordering.
  */
 void matmult_mnk(int M, int N, int K, double **A, double **B, double **C)
 {
+	set_to_zero(M, N, C);
 	for (int m = 0; m < M; m++)
 		for (int n = 0; n < N; n++)
 			for (int k = 0; k < K; k++)
@@ -41,6 +52,7 @@ void matmult_mnk(int M, int N, int K, double **A, double **B, double **C)
  */
 void matmult_mkn(int M, int N, int K, double **A, double **B, double **C)
 {
+	set_to_zero(M, N, C);
 	for (int m = 0; m < M; m++)
 		for (int k = 0; k < K; k++)
 			for (int n = 0; n < N; n++)
@@ -52,6 +64,7 @@ void matmult_mkn(int M, int N, int K, double **A, double **B, double **C)
  */
 void matmult_nkm(int M, int N, int K, double **A, double **B, double **C)
 {
+	set_to_zero(M, N, C);
 	for (int n = 0; n < N; n++)
 		for (int k = 0; k < K; k++)
 			for (int m = 0; m < M; m++)
@@ -63,6 +76,7 @@ void matmult_nkm(int M, int N, int K, double **A, double **B, double **C)
  */
 void matmult_kmn(int M, int N, int K, double **A, double **B, double **C)
 {
+	set_to_zero(M, N, C);
 	for (int k = 0; k < K; k++)
 		for (int m = 0; m < M; m++)
 			for (int n = 0; n < N; n++)
@@ -74,6 +88,7 @@ void matmult_kmn(int M, int N, int K, double **A, double **B, double **C)
  */
 void matmult_knm(int M, int N, int K, double **A, double **B, double **C)
 {
+	set_to_zero(M, N, C);
 	for (int k = 0; k < K; k++)
 		for (int n = 0; n < N; n++)
 			for (int m = 0; m < M; m++)
@@ -85,6 +100,7 @@ void matmult_knm(int M, int N, int K, double **A, double **B, double **C)
  */
 void matmult_nmk(int M, int N, int K, double **A, double **B, double **C)
 {
+	set_to_zero(M, N, C);
 	for (int n = 0; n < N; n++)
 		for (int m = 0; m < M; m++)
 			for (int k = 0; k < K; k++)
@@ -98,6 +114,7 @@ void matmult_nmk(int M, int N, int K, double **A, double **B, double **C)
  */
 void matmult_blk(int M, int N, int K, double **A, double **B, double **C, int bs)
 {
+	set_to_zero(M, N, C);
 	for (int m0 = 0; m0 < M; m0 += bs)
 		for (int k0 = 0; k0 < K; k0 += bs)
 			for (int n0 = 0; n0 < N; n0 += bs)
