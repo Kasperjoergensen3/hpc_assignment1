@@ -1,6 +1,7 @@
 # Directories
 SRCDIR  = src
 OBJDIR  = build
+DRIVERDIR = drivers
 BINDIR  = bin
 INCLUDEDIR = include
 
@@ -12,7 +13,6 @@ PIC     = -fPIC
 WARN    = -Wall
 CFLAGS  = $(OPT) $(PIC) $(XOPTS) -I$(INCLUDEDIR) $(WARN)
 
-
 # Source and object files
 LIBSRCS = $(wildcard $(SRCDIR)/*.c)
 LIBOBJS = $(patsubst $(SRCDIR)/%.c, $(OBJDIR)/%.o, $(LIBSRCS))
@@ -22,7 +22,12 @@ TARGET  = $(BINDIR)/libmatmult.so
 
 # Shared library flags
 SOFLAGS = -shared 
-XLIBS   = -L/usr/lib64/atlas -lsatlas
+XLIBS   =  #-L/usr/lib64/atlas -lsatlas
+
+# Additional driver sources
+DRIVERSRC = $(DRIVERDIR)/matmult_c.gcc
+DRIVEROBJ = $(OBJDIR)/matmult_c.o
+DRIVERBIN = $(BINDIR)/matmult_c
 
 # Verbosity control
 V ?= 1
@@ -40,6 +45,16 @@ $(TARGET): $(LIBOBJS)
 $(OBJDIR)/%.o: $(SRCDIR)/%.c
 	@echo "Compiling $<..."
 	$(Q)$(CC) $(CFLAGS) -c $< -o $@
+
+# Compile the driver
+$(DRIVEROBJ): $(DRIVERSRC)
+	@echo "Compiling driver $<..."
+	$(Q)$(CC) $(CFLAGS) -c $< -o $@
+
+# Link the driver with the shared library
+$(DRIVERBIN): $(DRIVEROBJ) $(TARGET)
+	@echo "Linking driver..."
+	$(Q)$(CC) -o $@ $(DRIVEROBJ) -L$(BINDIR) -lmatmult $(XLIBS)
 
 # Clean build artifacts
 clean:
