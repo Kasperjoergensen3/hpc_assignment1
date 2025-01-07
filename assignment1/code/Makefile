@@ -7,7 +7,7 @@ INCLUDEDIR = include
 # Compiler settings
 CC      = gcc
 OPT     = -g
-XOPTS   = ""
+XOPTS   = 
 PIC     = -fPIC
 WARN    = -Wall
 CFLAGS  = $(OPT) $(PIC) $(XOPTS) -I$(INCLUDEDIR) $(WARN)
