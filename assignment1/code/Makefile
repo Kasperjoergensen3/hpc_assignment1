@@ -71,5 +71,10 @@ run_driver:
 	@echo "Running driver..."
 	$(Q)LD_LIBRARY_PATH=./$(LIBDIR) LD_PRELOAD=./$(TARGET) ./$(DRIVER) knm 1000 2000 400
 
+git:
+	git add .
+	git commit -m "commit"
+	git push
+
 # Include dependency file if it exists
 -include Makefile.dep
