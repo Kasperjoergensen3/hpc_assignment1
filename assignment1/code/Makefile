@@ -1,44 +1,69 @@
+# Directories
+SRCDIR  = src
+OBJDIR  = build
+BINDIR  = bin
+INCLUDEDIR = include
+
 # Compiler settings
 CC      = gcc
 OPT     = -g
-XOPTS = ""
-PIC	= -fPIC
-INCLUDEDIR= -Iinclude
-CFLAGS  = $(OPT) $(PIC) $(XOPTS) $(INCLUDEDIR)
-
-SRCDIR = src
-OBJDIR = build
-BINDIR = bin
-LIBSRCS	= $(wildcard src/*.c)
-LIBOBJS	= $(patsubst src/%.c, $(OBJDIR)/%.o, $(LIBSRCS))
+XOPTS   = ""
+PIC     = -fPIC
+WARN    = -Wall
+CFLAGS  = $(OPT) $(PIC) $(XOPTS) -I$(INCLUDEDIR) $(WARN)
 
 
+# Source and object files
+LIBSRCS = $(wildcard $(SRCDIR)/*.c)
+LIBOBJS = $(patsubst $(SRCDIR)/%.c, $(OBJDIR)/%.o, $(LIBSRCS))
 
-TARGET	= $(BINDIR)/libmatmult.so
+# Output shared library
+TARGET  = $(BINDIR)/libmatmult.so
 
-
-
-
-
+# Shared library flags
 SOFLAGS = -shared 
-XLIBS	= -L/usr/lib64/atlas -lsatlas
+XLIBS   = -L/usr/lib64/atlas -lsatlas
 
+# Verbosity control
+V ?= 1
+Q = $(if $(filter 1,$V),,@)
+
+# Ensure output directories exist
+$(shell mkdir -p $(OBJDIR) $(BINDIR))
+
+# Build the shared library
 $(TARGET): $(LIBOBJS)
-	$(CC) -o $@ $(SOFLAGS) $(LIBOBJS) $(XLIBS)
+	@echo "Linking $@..."
+	$(Q)$(CC) -o $@ $(SOFLAGS) $(LIBOBJS) $(XLIBS)
 
+# Compile object files
+$(OBJDIR)/%.o: $(SRCDIR)/%.c
+	@echo "Compiling $<..."
+	$(Q)$(CC) $(CFLAGS) -c $< -o $@
+
+# Clean build artifacts
 clean:
-	@/bin/rm -f core core.* $(LIBOBJS) 
+	@echo "Cleaning object files..."
+	$(Q)rm -f $(LIBOBJS)
 
-realclean : clean
-	@rm -f $(TARGET) Makefile.dep outputs/*
+realclean: clean
+	@echo "Removing binary and dependency files..."
+	$(Q)rm -rf $(BINDIR) $(OBJDIR) Makefile.dep outputs/*
 
-run_test : 
-	sh jobs/job.sh
+# Run test script
+run_test:
+	@echo "Running test script..."
+	$(Q)sh jobs/job.sh
 
-depend: 
-	$(CC) -MM $(INCLUDEDIR) $(LIBSRCS) > Makefile.dep 
-#$(CC) -MM data.c main.c io.c > Makefile.dep
-run_program:
-	./$(TARGET)
+# Generate dependencies
+depend:
+	@echo "Generating dependencies..."
+	$(Q)$(CC) -MM $(CFLAGS) $(LIBSRCS) > Makefile.dep
 
+# Run program (assumes an executable, not shared library)
+run_program: $(TARGET)
+	@echo "Executing binary..."
+	$(Q)./$(TARGET)
+
+# Include dependency file if it exists
 -include Makefile.dep
