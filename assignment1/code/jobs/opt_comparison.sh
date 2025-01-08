@@ -16,13 +16,13 @@ DIMS="16 32 64 128 256 512 1024"
 ORDERS="lib mnk mkn nkm nmk kmn knm"
 for tag in $TAGS; do
     #empty the file opt_comparison.dat if it exists
-    >data/opt_comparison$tag.dat
+    >data/opt_comparison_$tag.dat
 
     #make double for loop to run the executables
     for dim in $DIMS; do
         for order in $ORDERS; do
             # Run the make command
-            make run_driver DIMS="$dim $dim $dim" ORDER=$order V=0 TAG=$tag >>data/opt_comparison$tag.dat
+            make run_driver DIMS="$dim $dim $dim" ORDER=$order V=0 TAG=$tag >>data/opt_comparison_$tag.dat
         done
     done
 done
