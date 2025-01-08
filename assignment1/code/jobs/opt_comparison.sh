@@ -11,7 +11,7 @@ mkdir -p data
 
 sh ./jobs/compile_all.sh
 
-TAGS="_O3 _default _O _O2 _Ofast"
+TAGS="O3 default O O2 Ofast"
 DIMS="16 32 64 128 256 512 1024"
 ORDERS="lib mnk mkn nkm nmk kmn knm"
 for tag in $TAGS; do
@@ -22,7 +22,7 @@ for tag in $TAGS; do
     for dim in $DIMS; do
         for order in $ORDERS; do
             # Run the make command
-            make run_driver DIMS="$dim $dim $dim" ORDER=$order V=0 TAG=$tag>> data/opt_comparison$tag.dat
+            make run_driver DIMS="$dim $dim $dim" ORDER=$order V=0 TAG=$tag >>data/opt_comparison$tag.dat
         done
     done
 done

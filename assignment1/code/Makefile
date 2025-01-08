@@ -1,5 +1,5 @@
 # name tag
-TAG =
+TAG = test
 # Directories
 SRCDIR  = src
 OBJDIR  = build
@@ -19,7 +19,7 @@ LIBSRCS = $(wildcard $(SRCDIR)/*.c)
 LIBOBJS = $(patsubst $(SRCDIR)/%.c, $(OBJDIR)/%.o, $(LIBSRCS))
 
 # Output shared library
-TARGET  = $(LIBDIR)/libmatmult$(TAG).so
+TARGET  = $(LIBDIR)/$(TAG)/libmatmult.so
 
 # Shared library flags
 SOFLAGS = -shared 
@@ -63,9 +63,7 @@ run_program: $(TARGET)
 DIMS = 1000 2000 400
 ORDER = nat
 run_driver:
-	$(Q)cp ./$(TARGET) ./lib/libmatmult.so
-	$(Q)LD_LIBRARY_PATH=./$(LIBDIR) ./$(DRIVER) $(ORDER) $(DIMS)
-	$(Q)rm ./lib/libmatmult.so
+	$(Q)LD_LIBRARY_PATH=./$(LIBDIR)/$(TAG) ./$(DRIVER) $(ORDER) $(DIMS)
 
 git:
 	git add .
