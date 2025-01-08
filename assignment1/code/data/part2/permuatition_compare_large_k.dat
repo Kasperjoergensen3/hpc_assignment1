@@ -1,3 +1,35 @@
      1.125    396.714 0 # matmult_lib
      1.125    369.593 0 # matmult_mnk
      1.125    433.993 0 # matmult_mkn
+     1.125    370.202 0 # matmult_nkm
+     1.125    368.118 0 # matmult_nmk
+     1.125    436.949 0 # matmult_kmn
+     1.125    370.356 0 # matmult_knm
+     2.125    626.071 0 # matmult_lib
+     2.125    609.691 0 # matmult_mnk
+     2.125    792.749 0 # matmult_mkn
+     2.125    582.757 0 # matmult_nkm
+     2.125    573.139 0 # matmult_nmk
+     2.125    794.371 0 # matmult_kmn
+     2.125    594.801 0 # matmult_knm
+     4.125    949.543 0 # matmult_lib
+     4.125    911.937 0 # matmult_mnk
+     4.125   1298.864 0 # matmult_mkn
+     4.125    801.792 0 # matmult_nkm
+     4.125    788.799 0 # matmult_nmk
+     4.125   1291.840 0 # matmult_kmn
+     4.125    841.524 0 # matmult_knm
+     8.125   1419.876 0 # matmult_lib
+     8.125   1227.549 0 # matmult_mnk
+     8.125   1869.404 0 # matmult_mkn
+     8.125   1011.112 0 # matmult_nkm
+     8.125    971.795 0 # matmult_nmk
+     8.125   1870.570 0 # matmult_kmn
+     8.125   1075.781 0 # matmult_knm
+    16.125   1893.595 0 # matmult_lib
+    16.125   1469.572 0 # matmult_mnk
+    16.125   2571.215 0 # matmult_mkn
+    16.125   1098.833 0 # matmult_nkm
+    16.125   1092.937 0 # matmult_nmk
+    16.125   2578.976 0 # matmult_kmn
+    16.125   1208.391 0 # matmult_knm
