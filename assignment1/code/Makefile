@@ -69,7 +69,7 @@ run_program: $(TARGET)
 DIMS = 1000 2000 400
 ORDER = nat
 run_driver:
-	$(Q)LD_LIBRARY_PATH=./$(LIBDIR)/$(TAG) ./$(DRIVER) $(ORDER) $(DIMS)
+	OMP_THREAD_LIMIT=1 $(Q)LD_LIBRARY_PATH=./$(LIBDIR)/$(TAG) ./$(DRIVER) $(ORDER) $(DIMS)
 
 git:
 	git add .
