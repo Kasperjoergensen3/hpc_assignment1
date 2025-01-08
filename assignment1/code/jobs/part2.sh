@@ -1,5 +1,5 @@
 #!/bin/sh
-#BSUB -J part1
+#BSUB -J part2
 #BSUB -o outputs/_%J.out
 #BSUB -e outputs/_%J.err
 #BSUB -q hpcintro
@@ -10,17 +10,17 @@
 #BSUB -R "span[hosts=1] affinity[socket(1)]"
 
 TAG="O3"
-DATAFILENAME="data/part1/lib_nat_compare.dat"
+DATAFILENAME="data/part2/permuatition_compare.dat"
 >$DATAFILENAME
 
 #compile relevant files
 make TAG=$(TAG) OPT="-g -O3" #Optimization level 3
 make clean
 
-mkdir -p outputs data/part1 # ensure that the directories exist
+mkdir -p outputs data/part2 # ensure that the directories exist
 
 DIMS="16 32 64 128 256 512 1024 2048"
-ORDERS="lib nat"
+ORDERS="lib mnk mkn nkm nmk kmn knm"
 
 #make double for loop to run the executables
 for dim in $DIMS; do

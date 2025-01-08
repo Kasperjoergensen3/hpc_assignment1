@@ -6,15 +6,15 @@ rm -f  build/matmult.o
 
 ------------------------------------------------------------
 Sender: LSF System <lsfadmin@hpc.dtu.dk>
-Subject: Job 23555704: <compare_compiler_optim> in cluster <dcc> Exited
+Subject: Job 23555776: <compare_compiler_optim> in cluster <dcc> Exited
 
-Job <compare_compiler_optim> was submitted from host <n-62-27-20> by user <s204231> in cluster <dcc> at Wed Jan  8 11:42:55 2025
-Job was executed on host(s) <n-62-21-75>, in queue <hpcintro>, as user <s204231> in cluster <dcc> at Wed Jan  8 11:42:55 2025
+Job <compare_compiler_optim> was submitted from host <n-62-27-20> by user <s204231> in cluster <dcc> at Wed Jan  8 12:01:08 2025
+Job was executed on host(s) <n-62-21-75>, in queue <hpcintro>, as user <s204231> in cluster <dcc> at Wed Jan  8 12:01:10 2025
 </zhome/4b/e/155339> was used as the home directory.
 </zhome/4b/e/155339/Desktop/hpc_assignment1/assignment1/code> was used as the working directory.
-Started at Wed Jan  8 11:42:55 2025
-Terminated at Wed Jan  8 12:00:54 2025
-Results reported at Wed Jan  8 12:00:54 2025
+Started at Wed Jan  8 12:01:10 2025
+Terminated at Wed Jan  8 12:01:47 2025
+Results reported at Wed Jan  8 12:01:47 2025
 
 Your job looked like:
 
@@ -54,21 +54,21 @@ done
 
 ------------------------------------------------------------
 
-TERM_MEMLIMIT: job killed after reaching LSF memory usage limit.
+TERM_OWNER: job killed by owner.
 Exited with exit code 130.
 
 Resource usage summary:
 
-    CPU time :                                   1078.33 sec.
-    Max Memory :                                 2048 MB
-    Average Memory :                             868.90 MB
+    CPU time :                                   36.02 sec.
+    Max Memory :                                 15 MB
+    Average Memory :                             12.00 MB
     Total Requested Memory :                     2048.00 MB
-    Delta Memory :                               0.00 MB
+    Delta Memory :                               2033.00 MB
     Max Swap :                                   -
     Max Processes :                              5
     Max Threads :                                6
-    Run time :                                   1079 sec.
-    Turnaround time :                            1079 sec.
+    Run time :                                   37 sec.
+    Turnaround time :                            39 sec.
 
 The output (if any) is above this job summary.
 
@@ -76,5 +76,5 @@ The output (if any) is above this job summary.
 
 PS:
 
-Read file <outputs/_23555704.err> for stderr output of this job.
+Read file <outputs/_23555776.err> for stderr output of this job.
 

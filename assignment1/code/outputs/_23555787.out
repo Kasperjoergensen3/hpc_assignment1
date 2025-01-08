@@ -6,15 +6,15 @@ rm -f  build/matmult.o
 
 ------------------------------------------------------------
 Sender: LSF System <lsfadmin@hpc.dtu.dk>
-Subject: Job 23555704: <compare_compiler_optim> in cluster <dcc> Exited
+Subject: Job 23555787: <compare_compiler_optim> in cluster <dcc> Exited
 
-Job <compare_compiler_optim> was submitted from host <n-62-27-20> by user <s204231> in cluster <dcc> at Wed Jan  8 11:42:55 2025
-Job was executed on host(s) <n-62-21-75>, in queue <hpcintro>, as user <s204231> in cluster <dcc> at Wed Jan  8 11:42:55 2025
+Job <compare_compiler_optim> was submitted from host <n-62-27-20> by user <s204231> in cluster <dcc> at Wed Jan  8 12:07:09 2025
+Job was executed on host(s) <n-62-21-75>, in queue <hpcintro>, as user <s204231> in cluster <dcc> at Wed Jan  8 12:07:09 2025
 </zhome/4b/e/155339> was used as the home directory.
 </zhome/4b/e/155339/Desktop/hpc_assignment1/assignment1/code> was used as the working directory.
-Started at Wed Jan  8 11:42:55 2025
-Terminated at Wed Jan  8 12:00:54 2025
-Results reported at Wed Jan  8 12:00:54 2025
+Started at Wed Jan  8 12:07:09 2025
+Terminated at Wed Jan  8 12:11:05 2025
+Results reported at Wed Jan  8 12:11:05 2025
 
 Your job looked like:
 
@@ -27,21 +27,22 @@ Your job looked like:
 #BSUB -q hpcintro
 #BSUB -W 60
 #BSUB -R "rusage[mem=2048MB]"
+#BSUB -n 1
 #BSUB -R "select[model == XeonE5_2650v4]"
 #BSUB -R "span[hosts=1] affinity[socket(1)]"
 
 TAG="O3"
-DATAFILENAME="data/part1/lib_nat_compare.dat"
+DATAFILENAME="data/part1/permuatition_compare.dat"
 >$DATAFILENAME
 
 #compile relevant files
 make TAG=$(TAG) OPT="-g -O3" #Optimization level 3
 make clean
 
-mkdir -p outputs data/part1 # ensure that the directories exist
+mkdir -p outputs data/part2 # ensure that the directories exist
 
-DIMS="16 32 64 128 256 512 1024 2048 4096 8192 16384 32768 65536 131072"
-ORDERS="lib nat"
+DIMS="16 32 64 128 256 512 1024 2048"
+ORDERS="lib mnk mkn nkm nmk kmn knm"
 
 #make double for loop to run the executables
 for dim in $DIMS; do
@@ -54,21 +55,20 @@ done
 
 ------------------------------------------------------------
 
-TERM_MEMLIMIT: job killed after reaching LSF memory usage limit.
-Exited with exit code 130.
+Exited with exit code 1.
 
 Resource usage summary:
 
-    CPU time :                                   1078.33 sec.
-    Max Memory :                                 2048 MB
-    Average Memory :                             868.90 MB
+    CPU time :                                   233.76 sec.
+    Max Memory :                                 39 MB
+    Average Memory :                             31.00 MB
     Total Requested Memory :                     2048.00 MB
-    Delta Memory :                               0.00 MB
+    Delta Memory :                               2009.00 MB
     Max Swap :                                   -
     Max Processes :                              5
     Max Threads :                                6
-    Run time :                                   1079 sec.
-    Turnaround time :                            1079 sec.
+    Run time :                                   236 sec.
+    Turnaround time :                            236 sec.
 
 The output (if any) is above this job summary.
 
@@ -76,5 +76,5 @@ The output (if any) is above this job summary.
 
 PS:
 
-Read file <outputs/_23555704.err> for stderr output of this job.
+Read file <outputs/_23555787.err> for stderr output of this job.
 

@@ -1,0 +1,5 @@
+rm -f  build/matmult.o
+gcc -MM -g -O3 -fPIC  -Wall src/matmult.c > Makefile.dep
+gcc -g -O3 -fPIC  -Wall -c src/matmult.c -o build/matmult.o
+gcc -g -O3 -fPIC  -Wall -o lib//libmatmult.so -shared   build/matmult.o -L/usr/lib64/atlas -lsatlas
+rm -f  build/matmult.o
