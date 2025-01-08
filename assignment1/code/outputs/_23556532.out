@@ -6,15 +6,15 @@ rm -f  build/matmult.o
 
 ------------------------------------------------------------
 Sender: LSF System <lsfadmin@hpc.dtu.dk>
-Subject: Job 23555855: <part2> in cluster <dcc> Done
+Subject: Job 23556532: <part2> in cluster <dcc> Done
 
-Job <part2> was submitted from host <n-62-27-20> by user <s204231> in cluster <dcc> at Wed Jan  8 12:32:55 2025
-Job was executed on host(s) <n-62-21-77>, in queue <hpcintro>, as user <s204231> in cluster <dcc> at Wed Jan  8 12:32:55 2025
+Job <part2> was submitted from host <n-62-27-20> by user <s204231> in cluster <dcc> at Wed Jan  8 12:44:06 2025
+Job was executed on host(s) <n-62-21-76>, in queue <hpcintro>, as user <s204231> in cluster <dcc> at Wed Jan  8 12:44:08 2025
 </zhome/4b/e/155339> was used as the home directory.
 </zhome/4b/e/155339/Desktop/hpc_assignment1/assignment1/code> was used as the working directory.
-Started at Wed Jan  8 12:32:55 2025
-Terminated at Wed Jan  8 12:36:28 2025
-Results reported at Wed Jan  8 12:36:28 2025
+Started at Wed Jan  8 12:44:08 2025
+Terminated at Wed Jan  8 12:48:25 2025
+Results reported at Wed Jan  8 12:48:25 2025
 
 Your job looked like:
 
@@ -41,14 +41,14 @@ make clean
 
 mkdir -p outputs data/part2 # ensure that the directories exist
 
-DIMS="16 32 64 128 256 512 1024 2048 4096 8192"
+DIMS="16 32 64 128 256 512 1024 2048 4096 8192 16384 32768"
 ORDERS="lib mnk mkn nkm nmk kmn knm"
 
 #make double for loop to run the executables
 for dim in $DIMS; do
     for order in $ORDERS; do
         # Run the make command
-        make run_driver DIMS="$64 $64 $dim" ORDER=$order V=0 TAG=$TAG >>$DATAFILENAME
+        make run_driver DIMS="$128 $128 $dim" ORDER=$order V=0 TAG=$TAG >>$DATAFILENAME
     done
 done
 
@@ -59,16 +59,16 @@ Successfully completed.
 
 Resource usage summary:
 
-    CPU time :                                   211.52 sec.
-    Max Memory :                                 8 MB
-    Average Memory :                             7.25 MB
+    CPU time :                                   254.84 sec.
+    Max Memory :                                 18 MB
+    Average Memory :                             15.25 MB
     Total Requested Memory :                     2048.00 MB
-    Delta Memory :                               2040.00 MB
+    Delta Memory :                               2030.00 MB
     Max Swap :                                   -
     Max Processes :                              5
     Max Threads :                                6
-    Run time :                                   213 sec.
-    Turnaround time :                            213 sec.
+    Run time :                                   257 sec.
+    Turnaround time :                            259 sec.
 
 The output (if any) is above this job summary.
 
@@ -76,5 +76,5 @@ The output (if any) is above this job summary.
 
 PS:
 
-Read file <outputs/_23555855.err> for stderr output of this job.
+Read file <outputs/_23556532.err> for stderr output of this job.
 
