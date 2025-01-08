@@ -29,16 +29,19 @@ XLIBS   =  -L/usr/lib64/atlas -lsatlas
 V ?= 1
 Q = $(if $(filter 1,$V),,@)
 
-# Ensure output directories exist
-$(shell mkdir -p $(OBJDIR) $(LIBDIR) outputs figures data)
+
 
 # Build the shared library
-$(TARGET): clean depend $(LIBOBJS)
+$(TARGET): clean create_dirs depend $(LIBOBJS)
 	$(Q)$(CC) $(CFLAGS) -o $@ $(SOFLAGS) $(LIBOBJS) $(XLIBS)
 
 # Compile object files
 $(OBJDIR)/%.o: $(SRCDIR)/%.c
 	$(Q)$(CC) $(CFLAGS) -c $< -o $@
+
+# Ensure output directories exist
+create_dirs:
+	$(shell mkdir -p $(OBJDIR) $(LIBDIR)/$(TAG) outputs figures data)
 
 # Clean build artifacts
 clean:
@@ -46,6 +49,9 @@ clean:
 
 realclean: clean
 	$(Q)rm -rf $(LIBDIR) $(OBJDIR) Makefile.dep outputs figures data
+
+deepclean: realclean
+	$(Q)rm -rf outputs figures data
 
 # Run test script
 run_test:
