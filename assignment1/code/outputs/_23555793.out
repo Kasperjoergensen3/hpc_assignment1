@@ -3,3 +3,78 @@ gcc -MM -g -O3 -fPIC  -Wall src/matmult.c > Makefile.dep
 gcc -g -O3 -fPIC  -Wall -c src/matmult.c -o build/matmult.o
 gcc -g -O3 -fPIC  -Wall -o lib//libmatmult.so -shared   build/matmult.o -L/usr/lib64/atlas -lsatlas
 rm -f  build/matmult.o
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@hpc.dtu.dk>
+Subject: Job 23555793: <part2> in cluster <dcc> Exited
+
+Job <part2> was submitted from host <n-62-27-20> by user <s204231> in cluster <dcc> at Wed Jan  8 12:11:38 2025
+Job was executed on host(s) <n-62-21-77>, in queue <hpcintro>, as user <s204231> in cluster <dcc> at Wed Jan  8 12:11:40 2025
+</zhome/4b/e/155339> was used as the home directory.
+</zhome/4b/e/155339/Desktop/hpc_assignment1/assignment1/code> was used as the working directory.
+Started at Wed Jan  8 12:11:40 2025
+Terminated at Wed Jan  8 12:19:07 2025
+Results reported at Wed Jan  8 12:19:07 2025
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/sh
+#BSUB -J part2
+#BSUB -o outputs/_%J.out
+#BSUB -e outputs/_%J.err
+#BSUB -q hpcintro
+#BSUB -W 60
+#BSUB -R "rusage[mem=2048MB]"
+#BSUB -n 1
+#BSUB -R "select[model == XeonE5_2650v4]"
+#BSUB -R "span[hosts=1] affinity[socket(1)]"
+
+TAG="O3"
+DATAFILENAME="data/part2/permuatition_compare.dat"
+>$DATAFILENAME
+
+#compile relevant files
+make TAG=$(TAG) OPT="-g -O3" #Optimization level 3
+make clean
+
+mkdir -p outputs data/part2 # ensure that the directories exist
+
+DIMS="16 32 64 128 256 512 1024 2048"
+ORDERS="lib mnk mkn nkm nmk kmn knm"
+
+#make double for loop to run the executables
+for dim in $DIMS; do
+    for order in $ORDERS; do
+        # Run the make command
+        make run_driver DIMS="$dim $dim $dim" ORDER=$order V=0 TAG=$TAG >>$DATAFILENAME
+    done
+done
+
+
+------------------------------------------------------------
+
+Exited with exit code 2.
+
+Resource usage summary:
+
+    CPU time :                                   445.78 sec.
+    Max Memory :                                 135 MB
+    Average Memory :                             98.50 MB
+    Total Requested Memory :                     2048.00 MB
+    Delta Memory :                               1913.00 MB
+    Max Swap :                                   -
+    Max Processes :                              5
+    Max Threads :                                6
+    Run time :                                   447 sec.
+    Turnaround time :                            449 sec.
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file <outputs/_23555793.err> for stderr output of this job.
+

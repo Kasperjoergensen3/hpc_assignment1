@@ -50,3 +50,7 @@
  98304.000   8209.485 0 # matmult_lib
  98304.000    373.067 300 # matmult_mnk
  98304.000   3207.857 300 # matmult_mkn
+ 98304.000    115.836 300 # matmult_nkm
+ 98304.000    331.690 300 # matmult_nmk
+OMP_THREAD_LIMIT=1 @LD_LIBRARY_PATH=./lib/O3 ./drivers/matmult_c.gcc kmn 2048 2048 2048
+OMP_THREAD_LIMIT=1 @LD_LIBRARY_PATH=./lib/O3 ./drivers/matmult_c.gcc knm 2048 2048 2048
