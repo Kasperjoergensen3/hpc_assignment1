@@ -10,6 +10,7 @@
  */
 void matmult_lib(int M, int N, int K, double **A, double **B, double **C)
 {
+	set_to_zero(M, N, C); // Set C to zero (not necessary, but done for better comparison)
 	cblas_dgemm(CblasRowMajor, CblasNoTrans, CblasNoTrans,
 				M, N, K, 1.0,
 				*A, K,		 // A matrix and leading dimension
